@@ -1,0 +1,27 @@
+name: pets-ml            # environment name
+channels:
+  - conda-forge          # preferred community channel
+  - pytorch              # to get official PyTorch builds
+dependencies:
+  # Core language
+  - python=3.10
+  - pip
+
+  # Jupyter
+  - jupyterlab>=4.0
+
+  # ML & vision
+  - pytorch              # CPU build; GPU builds auto-detect on Linux
+  - torchvision
+  - torchaudio
+  - scikit-learn
+  - pandas
+  - matplotlib
+
+  # Utility
+  - pillow
+  - tqdm
+  - pip:
+      - mlflow>=2.12
+      - prefect>=2.19
+      - evidently>=0.5
